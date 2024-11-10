@@ -70,3 +70,11 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'dotenv-rails', groups: [:development, :test] #sirve para cargar variables de entorno
+
+gem 'rails_admin'
+gem "cssbundling-rails"
+
+gem 'devise' #autenticacion
+gem 'cancancan' #autorizacion
