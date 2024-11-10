@@ -78,3 +78,8 @@ gem "cssbundling-rails"
 
 gem 'devise' #autenticacion
 gem 'cancancan' #autorizacion
+
+gem 'sassc-rails'
+
+gem 'bootstrap', '~> 5.0'
+gem 'jquery-rails' # Si usas Rails 5 o anterior
