@@ -1,0 +1,271 @@
+es:
+  activerecord:
+    models:
+      address: "Dirección"
+      address_type: "Tipo de Dirección"
+      claim: "Reclamo"
+      claim_status: "Estado del Reclamo"
+      claim_type: "Tipo de Reclamo"
+      document_type: "Tipo de Documento"
+      family_member: "Familiar"
+      family_member_type: "Tipo de Familiar"
+      gender: "Género"
+      marital_status: "Estado Civil"
+      organization: "Organismo"
+      person: "Persona"
+      phone: "Teléfono"
+      phone_type: "Tipo de Teléfono"
+      user: "Usuario"
+
+    attributes:
+      address:
+        street: "Calle"
+        number: "Número"
+        city: "Ciudad"
+        state: "Estado"
+        postal_code: "Código Postal"
+        person: "Persona"
+        address_type: "Tipo de Dirección"
+
+      address_type:
+        name: "Nombre"
+
+      claim:
+        description: "Descripción"
+        person: "Persona"
+        claim_type: "Tipo de Reclamo"
+
+      claim_status:
+        name: "Nombre"
+
+      claim_type:
+        name: "Nombre"
+
+      document_type:
+        name: "Nombre"
+
+      family_member:
+        first_name: "Nombre"
+        last_name: "Apellido"
+        person: "Persona"
+        family_member_type: "Tipo de Familiar"
+
+      family_member_type:
+        name: "Nombre"
+
+      gender:
+        name: "Nombre"
+
+      marital_status:
+        name: "Nombre"
+
+      organization:
+        name: "Nombre"
+
+      person:
+        name: "Nombre"
+        document: "Documento"
+        birth_date: "Fecha de Nacimiento"
+        gender: "Género"
+        marital_status: "Estado Civil"
+        document_type: "Tipo de Documento"
+        organization: "Organismo"
+
+      phone:
+        number: "Número"
+        person: "Persona"
+        phone_type: "Tipo de Teléfono"
+
+      phone_type:
+        name: "Nombre"
+
+      user:
+        email: "Correo Electrónico"
+        encrypted_password: "Contraseña Encriptada"
+        reset_password_token: "Token de Recuperación de Contraseña"
+        reset_password_sent_at: "Fecha de Envío del Token"
+        remember_created_at: "Fecha de Creación del Recuerdo"
+        role: "Rol"
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%e %b"
+      long: "%e de %B de %Y"
+    day_names:
+      - Domingo
+      - Lunes
+      - Martes
+      - Miércoles
+      - Jueves
+      - Viernes
+      - Sábado
+    abbr_day_names:
+      - Dom
+      - Lun
+      - Mar
+      - Mié
+      - Jue
+      - Vie
+      - Sáb
+    month_names:
+      - ~
+      - Enero
+      - Febrero
+      - Marzo
+      - Abril
+      - Mayo
+      - Junio
+      - Julio
+      - Agosto
+      - Septiembre
+      - Octubre
+      - Noviembre
+      - Diciembre
+    abbr_month_names:
+      - ~
+      - Ene
+      - Feb
+      - Mar
+      - Abr
+      - May
+      - Jun
+      - Jul
+      - Ago
+      - Sep
+      - Oct
+      - Nov
+      - Dic
+    order:
+      - :day
+      - :month
+      - :year
+  admin:
+    actions:
+      bulk_delete:
+        breadcrumb: Eliminación Múltiple
+        bulk_link: Eliminar los %{model_label_plural} seleccionados
+        menu: Eliminación Múltiple
+        title: Eliminar %{model_label_plural}
+      dashboard:
+        breadcrumb: Panel de control
+        menu: Panel de control
+        title: Administración del Sitio
+      delete:
+        breadcrumb: Eliminar
+        done: Eliminado
+        link: Eliminar  '%{object_label}'
+        menu: Eliminar
+        title: Eliminar %{model_label} '%{object_label}'
+      edit:
+        breadcrumb: Editar
+        done: Actualizado
+        link: Editar este  %{model_label}
+        menu: Editar
+        title: Editar %{model_label} '%{object_label}'
+      export:
+        breadcrumb: Exportar
+        bulk_link: Exportar Seleccionados %{model_label_plural}
+        done: exportado
+        link: Exportar   %{model_label_plural}  encontrados
+        menu: Exportar
+        title: Exportar %{model_label_plural}
+      history_index:
+        breadcrumb: Historial
+        menu: Historial
+        title: Historial para %{model_label_plural}
+      history_show:
+        breadcrumb: Historial
+        menu: Historial
+        title: Historial para %{model_label} '%{object_label}'
+      index:
+        breadcrumb: "%{model_label_plural}"
+        menu: Lista
+        title: Lista de %{model_label_plural}
+        no_records: No se han encontrado registros
+      new:
+        breadcrumb: Nuevo
+        done: creado
+        link: Añadir un nuevo %{model_label}
+        menu: Añadir Nuevo
+        title: Nuevo  %{model_label}
+      show:
+        breadcrumb: "%{object_label}"
+        menu: Ver
+        title: Detalles para  %{model_label} "%{object_label}"
+      show_in_app:
+        menu: Ver en la aplicación
+    export:
+      click_to_reverse_selection: Haga click para invertir la selección
+      confirmation: Exportar a %{name}
+      csv:
+        col_sep: Separador de columnas
+        col_sep_help: Deje en blanco para el de defecto ('%{value}')
+        default_col_sep: ","
+        encoding_to: Codificar a
+        encoding_to_help: "Elija la codificación de salida. Deje en blanco para no cambiar la codificación actual: (%{name})"
+        header_for_association_methods: "%{name} [%{association}]"
+        header_for_root_methods: "%{name}"
+        skip_header: Sin cabecera
+        skip_header_help: No incluir un encabezado (sin descripción de los campos)
+      display: "Mostrar %{name}: %{type}"
+      empty_value_for_associated_objects: "<vacío>"
+      fields_from: Campos de %{name}
+      fields_from_associated: Campos del %{name} asociado
+      options_for: Opciones para %{name}
+      select: Seleccione los campos a exportar
+    flash:
+      error: "%{name} no se ha %{action}"
+      model_not_found: El modelo '%{model}' no se pudo encontrar
+      noaction: No se llevó a cabo ninguna acción
+      object_not_found: "%{model} con id '%{id}' no se pudo encontrar"
+      successful: "%{name} %{action} con éxito"
+    form:
+      all_of_the_following_related_items_will_be_deleted: "? Los siguientes elementos relacionados pueden ser eliminados o quedar huérfanos:"
+      are_you_sure_you_want_to_delete_the_object: "¿Está seguro de que quiere eliminar este %{model_name}"
+      basic_info: Información Básica
+      bulk_delete: "Los siguientes objetos serán eliminados, lo cual puede eliminar o dejar huérfanas algunas de sus dependencias relacionadas:"
+      cancel: Cancelar
+      char_length_of: longitud de
+      char_length_up_to: longitud de hasta
+      confirmation: Si, estoy seguro
+      new_model: "%{name} (nuevo)"
+      one_char: carácter
+      optional: Opcional
+      required: Requerido
+      save: Guardar
+      save_and_add_another: Guardar y añadir otro
+      save_and_edit: Guardar y editar
+    misc:
+      add_filter: Añadir filtro
+      reset_filters: "Limpiar filtros"
+      add_new: Agregar nuevo
+      ago: atrás
+      bulk_menu_title: Elementos seleccionados
+      chose_all: Elegir todos
+      chosen: Elegido %{name}
+      clear_all: Borrar todos
+      down: Abajo
+      filter: Filtrar
+      filter_date_format: dd/mm/yy
+      log_out: Desconectar
+      navigation: Navegación
+      refresh: Actualizar
+      remove: Quitar
+      search: Buscar
+      show_all: Mostrar todo
+      up: Arriba
+    table_headers:
+      changes: Cambios
+      created_at: Fecha/Hora
+      item: Elemento
+      last_used: "Último uso"
+      message: Mensaje
+      model_name: Nombre del modelo
+      records: Registros
+      username: Usuario
+    home:
+      name: Inicio
+    pagination:
+      next: Siguiente &raquo;
+      previous: "&laquo; Anterior"
+      truncate: "…"

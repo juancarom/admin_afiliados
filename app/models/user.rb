@@ -8,4 +8,13 @@ class User < ApplicationRecord
   def admin?
     role == 'admin'
   end
+  def to_s
+    email
+  end
+
+  # Método para personalizar la etiqueta de los usuarios en RailsAdmin
+  # para el modelo User
+  def custom_label_method
+    "#{email} (#{role})"
+  end
 end

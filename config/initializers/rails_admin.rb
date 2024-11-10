@@ -1,4 +1,6 @@
 RailsAdmin.config do |config|
+  config.main_app_name = ["Sistema de Afiliados"]
+  I18n.default_locale = :es
   # Autenticación con Devise
   config.authenticate_with do
     # Redirige al inicio de sesión si no hay un usuario autenticado
@@ -14,6 +16,12 @@ RailsAdmin.config do |config|
       true
     else
       controller.redirect_to main_app.root_path, alert: 'No tienes permiso para acceder a esta página.'
+    end
+  end
+
+  config.model 'User' do
+    object_label_method do
+      :custom_label_method
     end
   end
 end
