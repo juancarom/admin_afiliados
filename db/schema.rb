@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_11_10_124142) do
+ActiveRecord::Schema[7.0].define(version: 2024_11_10_131512) do
   create_table "address_types", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -100,8 +100,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_10_124142) do
   end
 
   create_table "people", charset: "utf8mb4", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "name"
     t.string "document"
     t.date "birth_date"
     t.bigint "gender_id", null: false
