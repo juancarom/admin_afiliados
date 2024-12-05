@@ -86,3 +86,4 @@ gem 'jquery-rails' # Si usas Rails 5 o anterior
 
 
 gem 'rails_admin-i18n'
+gem "cssbundling-rails"

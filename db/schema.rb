@@ -11,13 +11,13 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2024_11_10_131512) do
-  create_table "address_types", charset: "utf8mb4", force: :cascade do |t|
+  create_table "address_types", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "addresses", charset: "utf8mb4", force: :cascade do |t|
+  create_table "addresses", charset: "latin1", force: :cascade do |t|
     t.string "street"
     t.string "number"
     t.string "city"
@@ -31,24 +31,24 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_10_131512) do
     t.index ["person_id"], name: "index_addresses_on_person_id"
   end
 
-  create_table "claim_statuses", charset: "utf8mb4", force: :cascade do |t|
+  create_table "claim_statuses", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "claim_statuses_claims", id: false, charset: "utf8mb4", force: :cascade do |t|
+  create_table "claim_statuses_claims", id: false, charset: "latin1", force: :cascade do |t|
     t.bigint "claim_id", null: false
     t.bigint "claim_status_id", null: false
   end
 
-  create_table "claim_types", charset: "utf8mb4", force: :cascade do |t|
+  create_table "claim_types", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "claims", charset: "utf8mb4", force: :cascade do |t|
+  create_table "claims", charset: "latin1", force: :cascade do |t|
     t.text "description"
     t.bigint "person_id", null: false
     t.bigint "claim_type_id", null: false
@@ -58,19 +58,19 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_10_131512) do
     t.index ["person_id"], name: "index_claims_on_person_id"
   end
 
-  create_table "document_types", charset: "utf8mb4", force: :cascade do |t|
+  create_table "document_types", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "family_member_types", charset: "utf8mb4", force: :cascade do |t|
+  create_table "family_member_types", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "family_members", charset: "utf8mb4", force: :cascade do |t|
+  create_table "family_members", charset: "latin1", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.bigint "person_id", null: false
@@ -81,25 +81,25 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_10_131512) do
     t.index ["person_id"], name: "index_family_members_on_person_id"
   end
 
-  create_table "genders", charset: "utf8mb4", force: :cascade do |t|
+  create_table "genders", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "marital_statuses", charset: "utf8mb4", force: :cascade do |t|
+  create_table "marital_statuses", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "organizations", charset: "utf8mb4", force: :cascade do |t|
+  create_table "organizations", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "people", charset: "utf8mb4", force: :cascade do |t|
+  create_table "people", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.string "document"
     t.date "birth_date"
@@ -115,13 +115,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_10_131512) do
     t.index ["organization_id"], name: "index_people_on_organization_id"
   end
 
-  create_table "phone_types", charset: "utf8mb4", force: :cascade do |t|
+  create_table "phone_types", charset: "latin1", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "phones", charset: "utf8mb4", force: :cascade do |t|
+  create_table "phones", charset: "latin1", force: :cascade do |t|
     t.string "number"
     t.bigint "person_id", null: false
     t.bigint "phone_type_id", null: false
@@ -131,7 +131,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_10_131512) do
     t.index ["phone_type_id"], name: "index_phones_on_phone_type_id"
   end
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+  create_table "users", charset: "latin1", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

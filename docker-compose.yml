@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: admin_afiliados_development
+      # MYSQL_USER: root
+      # MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  app:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'"
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      RAILS_ENV: development
+      SECRET_KEY_BASE: 52ecfdd5511f36318401719fc70f5f97bdc3b35b62f3ee10e9ef43f9772f7dc594767df79c30f95f2741278d5ecff02b0debcf7371a00e3b8d94214b13f03adb
+      DATABASE_HOST: db
+      DATABASE_USERNAME: root
+      DATABASE_PASSWORD: root
+
+volumes:
+  db_data:

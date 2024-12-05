@@ -1,6 +1,8 @@
 RailsAdmin.config do |config|
+  config.asset_source = :importmap
   config.main_app_name = ["Sistema de Afiliados"]
-  I18n.default_locale = :es
+
+  # I18n.default_locale = :es
   # Autenticación con Devise
   config.authenticate_with do
     # Redirige al inicio de sesión si no hay un usuario autenticado
